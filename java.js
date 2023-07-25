@@ -101,17 +101,20 @@ function html(block, click, index) {
 }
 function clear() {
   let green = block.querySelector("[class=green]");
+  if (green!==null){
   green.parentNode.removeChild(green);
+  }
   let blue = block.querySelector("[class=blue]");
+  if (blue!==null){
   blue.parentNode.removeChild(blue);
+  }
   let yellow = block.querySelector("[class=yellow]");
+  if (yellow!==null){
   yellow.parentNode.removeChild(yellow);
+  }
   let orange = block.querySelector("[class=orange]");
+  if (orange!==null){
   orange.parentNode.removeChild(orange);
-
-  let paras = block.getElementsByClassName("sel");
-  while (paras[0]) {
-    paras[0].parentNode.removeChild(paras[0]);
   }
   click = 0;
   index = 0;
