@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    width: 100%;
+    height: 100%;
+
+}
+body{
+    max-width: 100%;
+    height: 100%;
+   
+}
+.container{
+    max-width: 100%;
+    height: 100%;
+    background:linear-gradient(to right,#d7d2cc 0%,#304352 100%);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    text-shadow: 5px 0 2px red;
+}
+.year2>h1{
+    text-shadow: 5px 0 2px blue;
+}
+.year{
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 25px;
+    cursor:default;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.year2{
+    margin-top:20px;
+}
+
+
+.mounf{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.otstup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-right:10px;
+    flex: 0 0 17%;
+}
+.avg, .cent, .okt, .nov, .dec{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    box-shadow: 0px 10px 10px black;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:cursive;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: white;
+}
+a{
+    text-decoration: none;
+    color:black;
+    transition: 1s ease 0s;
+}
+
+a:hover{
+    color: white;
+    box-shadow: none;
+    position: relative;
+    font-family: fantasy;
+    font-size: 30px;
+    top: 7.5px;
+    
+}
+.avg:hover{
+    background-color: black;
+}
+.cent:hover{
+    background-color: black;
+}
+.okt:hover{
+    background-color: black;
+}
+.nov:hover{
+    background-color: black;
+}
+.dec:hover{
+    background-color: black;
+}
+/* 
+--------------AVGUST--------------------
+----------------------------------------
+*/
+.daily{
+    width: 1050px;
+    height: 25px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.container--avg{
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:linear-gradient(to right,#d7d2cc 0%,#304352 100%);
+}
+
+.content--avg{
+    margin:0 auto;
+    max-width: 1050px;
+    height: 100%;
+}
+.head--avg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}
+.text--avg{
+    font-size: 24px;
+    color:black;
+    font-family: monospace;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.year--avg{
+    width: 150px;
+    height: 50px;
+    background-color: greenyellow;
+}
+.month--avg{
+    width: 900px;
+    height: 50px;
+    justify-content: left;
+    padding-left: 10px;
+}
+.pon,.vtor,.sred,.chet,.nyat,.syb,.vosk{
+    width: 150px;
+    height: 25px;
+    border:1px solid white;
+    font-size: 16px;
+    font-family: monospace;
+    text-align: center;
+    padding-top:2px;
+    color: white;
+    background-color: black;
+}
+.body--avg{
+    width: 1050px;
+    height: 100%;
+}
+.col{
+    display: flex;
+}
+.day--avg{
+    width: 150px;
+    height: 100%;
+}
+.dayindex--avg{
+    border: 1px solid black;
+    text-align: center;
+    background-color: white;
+}
+.dayarea--avg{
+    height: 100px;
+    border: 1px solid black;
+
+}
+.text--area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: cursive;
+}
+
+.green{
+    background-color: greenyellow;
+}
+.green::before{
+    content: "Roman";
+}
+
+.blue{
+    background-color: blue;
+}
+.blue::before{
+    content: "Vlad";
+}
+.yellow{
+    background-color: yellow;
+}
+.yellow::before{
+    content: "KiriLL";
+}
+.orange{
+    background-color: orange;
+}
+.orange::before{
+    content: "Roman K";
+}
+.white{
+    background-color: white;
+}
+select{
+    display: block;
+    width: 40px;
+}
+.sel{}
+#but{
+    margin-left: 40px;
+}
+
