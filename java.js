@@ -56,6 +56,16 @@ function names(n,index=0) {
     n.style.display="none";
     index=0;
   }
+  document.getElementById(rod).onclick = function(e) {
+    const btn = e.target.closest('.but');
+    
+    if (!btn) {
+      return;
+    }
+    
+    btn.parentElement.remove();
+    // btn.closest('li').remove();
+  }
   return index;
 }
 
@@ -83,10 +93,4 @@ function clear(knopka) {
 }
 let index;
 var idex=0;
-let knopka = document.getElementsByClassName("but");
-if (knopka){
-  console.log(knopka);
-console.log(knopka[0]);
-  knopka.addEventListener("click", clear);
-}
 
