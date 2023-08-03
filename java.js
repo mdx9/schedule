@@ -5,14 +5,8 @@ function names(n,index=0) {
   let Rod=n.closest("div");
   // n= select
 
-  if (rod!==idex){
-    index=0;
-    idex=rod;
-  }
-
-  if (index<4){
+  console.log(values);
   if (values === "roman" && !(block.querySelector(".green"))) {
-    index++;
     block.insertAdjacentHTML(
       "beforeend",
       `
@@ -22,7 +16,6 @@ function names(n,index=0) {
   `
     );
   } else if (values === "vlad"  && !(block.querySelector(".blue"))) {
-    index++;
     block.insertAdjacentHTML(
       "afterbegin",
       `
@@ -30,10 +23,8 @@ function names(n,index=0) {
   </div>
   `
     )
-
     ;
   } else if (values === "kiril" && !(block.querySelector(".yellow"))) {
-    index++;
     block.insertAdjacentHTML(
       "afterbegin",
       `
@@ -42,7 +33,6 @@ function names(n,index=0) {
   `
     );
   } else if (values === "romank"  && !(block.querySelector(".orange"))) {
-    index++;
     block.insertAdjacentHTML(
       "afterbegin",
       `
@@ -50,12 +40,35 @@ function names(n,index=0) {
   </div>
   `
     );
-  }}
-  console.log("index= " + index);
-  if (index===4){
-    n.style.display="none";
-    index=0;
   }
+  let a,b,c,d;
+  if(block.querySelector('.green')){
+     a=true
+  }
+  if(block.querySelector('.blue')){
+     b=true
+  }
+  if(block.querySelector('.yellow')){
+     c=true
+  }
+  if(block.querySelector('.orange')){
+     d=true
+  }
+
+  if (a && b && c && d)
+  {
+    n.style.display="none";
+  }else  if (a || b || c || d)
+  {
+    n.style.display="block";
+
+  }
+  if (a && b && c && d)
+  {
+    console.log("none");
+    n.style.display="none";
+  }
+
   document.getElementById(rod).onclick = function(e) {
     const btn = e.target.closest('.but');
     
@@ -64,33 +77,28 @@ function names(n,index=0) {
     }
     
     btn.parentElement.remove();
+    n.style.display="block";
     // btn.closest('li').remove();
   }
   return index;
 }
-
-
-function clear(knopka) {
-  console.log(this);
-  console.log(knopka);
-  // let green = block.querySelector("[class=green]");
-  // if (green!==null){
-  // green.parentNode.removeChild(green);
-  // }
-  // let blue = block.querySelector("[class=blue]");
-  // if (blue!==null){
-  // blue.parentNode.removeChild(blue);
-  // }
-  // let yellow = block.querySelector("[class=yellow]");
-  // if (yellow!==null){
-  // yellow.parentNode.removeChild(yellow);
-  // }
-  // let orange = block.querySelector("[class=orange]");
-  // if (orange!==null){
-  // orange.parentNode.removeChild(orange);
-  // }
-
-}
 let index;
-var idex=0;
 
+function lines(){
+  let sizeW=Math.random()*12;
+  let duration=Math.random()*3;
+  let e=document.createElement('div')
+  e.setAttribute('class','cirle');
+  document.body.appendChild(e);
+  e.style.width=2+sizeW+'px';
+  e.style.left=Math.random() * +innerHeight+ "px";
+  e.style.animationDirection=2+duration+"s";
+  
+  setTimeout(function(){
+    document.body.removeChild(e)
+  },5000);
+}
+
+setInterval(function(){
+  lines();
+},500);
