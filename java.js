@@ -91,7 +91,7 @@ function lines(){
   e.setAttribute('class','cirle');
   document.body.appendChild(e);
   e.style.width=2+sizeW+'px';
-  e.style.left=Math.random() * +innerHeight+ "px";
+  e.style.left=Math.random()*+innerHeight+ "px";
   e.style.animationDirection=2+duration+"s";
   
   setTimeout(function(){
@@ -101,4 +101,21 @@ function lines(){
 
 setInterval(function(){
   lines();
-},500);
+},750);
+function lines2(){
+  let sizeW=Math.random()*12;
+  let duration=Math.random()*3;
+  let e=document.createElement('div')
+  e.setAttribute('class','cirle');
+  document.body.appendChild(e);
+  e.style.width=2+sizeW+'px';
+  e.style.right=Math.random()*+innerHeight+ "px";
+  e.style.animationDirection=2+duration+"s";
+  
+  setTimeout(function(){
+    document.body.removeChild(e)
+  },5000);
+}
+setInterval(function(){
+  lines2();
+},750);
